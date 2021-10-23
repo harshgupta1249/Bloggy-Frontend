@@ -10,6 +10,8 @@ import Write from "./pages/write/Write";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
+  const user = true;
+
   return (
     <Router>
       <Navbar />
@@ -19,16 +21,16 @@ function App() {
           <HomePage />
         </Route>
         <Route path="/register">
-          <Register />
+          {user ? <HomePage /> : <Register />}
         </Route>
         <Route path="/login">
-          <Login />
+          {user ? <HomePage /> : <Login />}
         </Route>
         <Route path="/write">
-          <Write />
+          {user ? <Write /> : <Login />}
         </Route>
         <Route path="/setting">
-          <Setting />
+          {user ? <Setting /> : <Login />}
         </Route>
         <Route path="/post/:postId">
           <Single />
