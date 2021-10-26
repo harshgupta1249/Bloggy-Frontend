@@ -1,7 +1,8 @@
 import { useLocation } from 'react-router';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import './SinglePost.css'
+import './SinglePost.css';
+import { Link } from 'react-router-dom';
 
 const SinglePost = () => {
     const location = useLocation();
@@ -38,9 +39,11 @@ const SinglePost = () => {
                 <div className="singlePostInfo">
                     <span>
                         Author:
-                        <b className="singlePostAuthor">
-                            {post.username}
-                        </b>
+                        <Link to={`/?user=${post.username}`} className="link">
+                            <span className="singlePostAuthor">
+                                {post.username}
+                            </span>
+                        </Link>
                     </span>
                     <span>{new Date(post.createdAt).toDateString()}</span>
                 </div>
