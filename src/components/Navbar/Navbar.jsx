@@ -10,6 +10,8 @@ const Navbar = () => {
         dispatch({type: "LOGOUT"});
     };
 
+    const PF = "http://localhost:8000/images/";
+
     return (
         <div className="top">
 
@@ -33,12 +35,7 @@ const Navbar = () => {
                 {
                     user ? (
                         <Link to="/settings">
-                            {(user.profilePic) ? (
-                                <img className="profile" src={user.profilePic} alt="profile" />
-                            ) : (
-                                <img className="profile" src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="profile" />
-                            )}
-                        
+                                <img className="profile" src={PF+user.ProfilePic} alt="profile" />
                         </Link>
                     ) : (
                             <ul className="list">
