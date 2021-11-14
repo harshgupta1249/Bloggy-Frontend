@@ -8,9 +8,11 @@ import Setting from "./pages/Settings/Settings";
 import Single from "./pages/Single/Single";
 import Write from "./pages/write/Write";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 
 function App() {
-  const user = false;
+  const {user} = useContext(Context);
 
   return (
     <Router>
