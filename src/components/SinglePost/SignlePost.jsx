@@ -18,13 +18,15 @@ const SinglePost = () => {
         getPost();
     }, [path]);
 
+    const PF = "http://localhost:8000/images/";
+
     return (
         <div className="singlePost">
             <div className="singlePostWrapper">
                 {post.photo &&
                     <img
                         className="singlePostImg"
-                        src={post.photo}
+                        src={PF + post.photo}
                         alt=""
                     />
                 }
