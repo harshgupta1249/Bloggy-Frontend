@@ -4,8 +4,10 @@ import App from "./App";
 import { ContextProvider } from "./context/Context";
 
 ReactDOM.render(
-  <ContextProvider>
-    <App />
-  </ContextProvider>,
+  <React.StrictMode>
+    <ContextProvider>
+      <App />
+    </ContextProvider>
+  </React.StrictMode>,
   document.getElementById("root")
 );
