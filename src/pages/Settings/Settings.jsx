@@ -7,41 +7,41 @@ import axios from "axios";
 const Settings = () => {
 
     const [file, setFile] = useState(null);
-  const [username, setUsername] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [success, setSuccess] = useState(false);
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [success, setSuccess] = useState(false);
 
-    const {user, dispatch} = useContext(Context);
+    const { user, dispatch } = useContext(Context);
     const PF = "http://localhost:8000/images/";
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         dispatch({ type: "UPDATE_START" });
         const updatedUser = {
-          userId: user._id,
-          username,
-          email,
-          password,
+            userId: user._id,
+            username,
+            email,
+            password,
         };
         if (file) {
-          const data = new FormData();
-          const filename = Date.now() + file.name;
-          data.append("name", filename);
-          data.append("file", file);
-          updatedUser.profilePic = filename;
-          try {
-            await axios.post("/upload", data);
-          } catch (err) {}
+            const data = new FormData();
+            const filename = Date.now() + file.name;
+            data.append("name", filename);
+            data.append("file", file);
+            updatedUser.ProfilePic = filename;
+            try {
+                await axios.post("http://localhost:8000/upload", data);
+            } catch (err) { }
         }
         try {
-          const res = await axios.put("http://localhost:8000/user/update/" + user._id, updatedUser);
-          setSuccess(true);
-          dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
+            const res = await axios.put("http://localhost:8000/user/update/" + user._id, updatedUser);
+            setSuccess(true);
+            dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
         } catch (err) {
-          dispatch({ type: "UPDATE_FAILURE" });
+            dispatch({ type: "UPDATE_FAILURE" });
         }
-      };
+    };
 
     return (
         <div className="settings">
@@ -54,7 +54,7 @@ const Settings = () => {
                     <label>Profile Picture</label>
                     <div className="settingsPP">
                         <img
-                            src={file ? URL.createObjectURL(file) : PF+user.profilePic}
+                            src={file ? URL.createObjectURL(file) : PF+user.ProfilePic}
                             alt=""
                         />
                         <label htmlFor="fileInput">
@@ -70,10 +70,10 @@ const Settings = () => {
                     </div>
                     <label>Username</label>
                     <input type="text" placeholder={user.username}
-            onChange={(e) => setUsername(e.target.value)} />
+                        onChange={(e) => setUsername(e.target.value)} />
                     <label>Email</label>
                     <input type="email" placeholder={user.email}
-            onChange={(e) => setEmail(e.target.value)} />
+                        onChange={(e) => setEmail(e.target.value)} />
                     <label>Password</label>
                     <input type="password" onChange={(e) => setPassword(e.target.value)} />
                     <button className="settingsSubmitButton" type="submit">
@@ -82,11 +82,11 @@ const Settings = () => {
                     {
                         success && (
                             <span
-                              style={{ color: "green", textAlign: "center", marginTop: "20px" }}
+                                style={{ color: "green", textAlign: "center", marginTop: "20px" }}
                             >
-                              Profile has been updated...
+                                Profile has been updated...
                             </span>
-                          )
+                        )
                     }
                 </form>
             </div>
