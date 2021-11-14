@@ -31,7 +31,7 @@ function App() {
         <Route path="/write">
           {user ? <Write /> : <Login />}
         </Route>
-        <Route path="/setting">
+        <Route path="/settings">
           {user ? <Setting /> : <Login />}
         </Route>
         <Route path="/post/:postId">

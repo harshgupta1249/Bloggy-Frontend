@@ -32,7 +32,14 @@ const Navbar = () => {
             <div className="topRight">
                 {
                     user ? (
-                        <img className="profile" src={user.profilePic} alt="profile" />
+                        <Link to="/settings">
+                            {(user.profilePic) ? (
+                                <img className="profile" src={user.profilePic} alt="profile" />
+                            ) : (
+                                <img className="profile" src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="profile" />
+                            )}
+                        
+                        </Link>
                     ) : (
                             <ul className="list">
                                 <li className="listItem"><Link className="link" to="/login">LOGIN</Link></li>
