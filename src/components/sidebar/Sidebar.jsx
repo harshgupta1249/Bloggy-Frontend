@@ -1,13 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import './Sidebar.css';
+import { Context } from '../../context/Context';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
     const [cats, setCats] = useState([]);
+    const {user} = useContext(Context);
 
     useEffect(() => {
         const getCats = async () => {
-            const res = await axios.get("http://localhost:8000/post/category/all");
+            const res = await axios.get("http://localhost:8000/category/all");
             setCats(res.data);
         }
         getCats();
@@ -21,10 +24,11 @@ const Sidebar = () => {
                     src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/grandblog/demo/wp-content/uploads/2015/11/aboutme.jpg"
                     alt=""
                 />
-                <p>
-                    Laboris sunt aute cupidatat velit magna velit ullamco dolore mollit
-                    amet ex esse.Sunt eu ut nostrud id quis proident.
-                </p>
+                    {user ? <p>your info</p> : 
+                    <p><Link to="/login">Not Logged in</Link>
+                        
+                    </p>
+                    }
             </div>
             <div className="sidebarItem">
                 <span className="sidebarTitle">CATEGORIES</span>
