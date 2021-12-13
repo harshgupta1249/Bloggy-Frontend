@@ -41,7 +41,8 @@
     font-size: 25px;
     border: none;
     padding: 15px;
-    width: 68.6vw;
+    width: 65.6vw;
+    margin-left: 10px;
   }
 
   .writeInput::placeholder {

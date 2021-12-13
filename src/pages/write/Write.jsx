@@ -36,12 +36,12 @@ const Write = () => {
         <div className="write">
             {file &&
                 <img className="writeImg" src={URL.createObjectURL(file)} alt="" />
-
             }
             <form className="writeForm" onSubmit={handleSubmit}>
                 <div className="writeFormGroup">
                     <label htmlFor="fileInput">
                         <i className="writeIcon fas fa-plus"></i>
+                        <p>Add Image</p>
                     </label>
                     <input type="file" id="fileInput" style={{ display: "none" }} onChange={(e)=> setFile(e.target.files[0])} />
                     <input
