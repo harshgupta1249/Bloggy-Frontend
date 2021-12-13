@@ -36,7 +36,14 @@ const Navbar = () => {
                 {
                     user ? (
                         <Link to="/settings">
-                                <img className="profile" src={PF+user.ProfilePic} alt="profile" />
+                            {
+                                user.ProfilePic ? (
+                                    <img className="profile" src={PF+user.ProfilePic} alt="profile" />
+                                ) : (
+                                    <img className="profile" src="https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="profile" />
+                                )
+                            }
+                                
                         </Link>
                     ) : (
                             <ul className="list">
