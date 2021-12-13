@@ -2,15 +2,22 @@
 <div align="center">
 
 # Bloggy
-
-
+   <b>Backend Repository : </b> https://github.com/harshgupta1249/Bloggy-Backend<br><br>
+   <kbd><img src="./assets/i1.png" border:></kbd>
+   <br><br><br>
+   <kbd><img src="./assets/i2.png"></kbd>
 </div>
+<br>
 
 
 # Project Description
 
-A new world in the existing world of Blogs. This project aims at providing a platform for free and easy interaction with the Blogs.<br> Users just simply need to Register themselves and can start reading pre-existing blogs.They can also write their own Blogs, add images and create their online presence. You can easily update your profile settings and picture and stay up to date. 
+A new world in the existing world of Blogs. This project aims at providing a platform for free and easy interaction with the Blogs.<br> Users just simply need to Register themselves and can start reading pre-existing blogs.They can also write their own Blogs, add images and create their online presence. You can easily update your profile settings and picture and stay up to date. <br>
 
+
+<br>
+<kbd><img src="./assets/i3.png"></kbd>
+<br>
 
 # Features Implemented
 
