@@ -24,7 +24,7 @@ const Sidebar = () => {
                     src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/grandblog/demo/wp-content/uploads/2015/11/aboutme.jpg"
                     alt=""
                 />
-                    {user ? <p>your info</p> : 
+                    {user ? <p>An Enthusiast Blogger. Exploring new fields of life, carrer and passion. Now I am so connected with Reading and Writing blogs, my day feels uncomplete without seeing one.</p> : 
                     <p><Link to="/login">Not Logged in</Link>
                         
                     </p>

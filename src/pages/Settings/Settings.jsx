@@ -43,6 +43,8 @@ const Settings = () => {
         }
     };
 
+    const defaultImage = "https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
+
     return (
         <div className="settings">
             <div className="settingsWrapper">
@@ -54,7 +56,7 @@ const Settings = () => {
                     <label>Profile Picture</label>
                     <div className="settingsPP">
                         <img
-                            src={file ? URL.createObjectURL(file) : PF+user.ProfilePic}
+                            src={file ? URL.createObjectURL(file) : user.ProfilePic ? PF+user.ProfilePic : defaultImage }
                             alt=""
                         />
                         <label htmlFor="fileInput">
@@ -70,12 +72,12 @@ const Settings = () => {
                     </div>
                     <label>Username</label>
                     <input type="text" placeholder={user.username}
-                        onChange={(e) => setUsername(e.target.value)} />
+                        onChange={(e) => setUsername(e.target.value)} required />
                     <label>Email</label>
                     <input type="email" placeholder={user.email}
-                        onChange={(e) => setEmail(e.target.value)} />
+                        onChange={(e) => setEmail(e.target.value)} required/>
                     <label>Password</label>
-                    <input type="password" onChange={(e) => setPassword(e.target.value)} />
+                    <input type="password" onChange={(e) => setPassword(e.target.value)} required/>
                     <button className="settingsSubmitButton" type="submit">
                         Update
                     </button>
