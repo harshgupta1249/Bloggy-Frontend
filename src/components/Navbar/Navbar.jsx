@@ -11,6 +11,7 @@ const Navbar = () => {
     };
 
     const PF = "http://localhost:8000/images/";
+    const about = "https://firstsiteguide.com/benefits-of-blogging/";
 
     return (
         <div className="top">
@@ -25,7 +26,7 @@ const Navbar = () => {
             <div className="topCenter">
                 <ul className="list">
                     <li className="listItem"><Link className="link" to="/">HOME</Link></li>
-                    <li className="listItem"><Link className="link" to="/about">ABOUT</Link></li>
+                    <li className="listItem"><a href={about} target="_blank" className="link" rel="noreferrer">ABOUT</a></li>
                     <li className="listItem"><Link className="link" to="/write">WRITE</Link></li>
                     <li className="listItem" onClick={handleLogout}>{user && "LOGOUT"}</li>
                 </ul>

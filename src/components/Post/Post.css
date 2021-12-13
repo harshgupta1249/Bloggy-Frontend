@@ -3,6 +3,8 @@
     margin: 0px 25px 60px 25px;
     display: flex;
     flex-direction: column;
+    box-shadow: 1px 1px 6px rgb(202, 202, 202);
+    border-radius: 10px;
   }
 
   .postImg {
@@ -58,7 +60,7 @@
     font-size: 14px;
     line-height: 24px;
     color: #444444;
-    margin-top: 15px;
+    margin: 15px 2px 5px 6px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
