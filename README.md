@@ -3,9 +3,8 @@
 
 # Bloggy
    <b>Backend Repository : </b> https://github.com/harshgupta1249/Bloggy-Backend<br><br>
-   <kbd><img src="./assets/i1.png" border:></kbd>
-   <br><br><br>
-   <kbd><img src="./assets/i2.png"></kbd>
+   ![i1](https://user-images.githubusercontent.com/78134473/208165232-c58e73f0-9c46-417c-8d33-e263e023f80f.png)
+   <br><br><br>![i2](https://user-images.githubusercontent.com/78134473/208165257-bca720b5-24fc-4caa-97ed-edf23c7f5009.png)
 </div>
 <br>
 
@@ -16,7 +15,8 @@ A new world in the existing world of Blogs. This project aims at providing a pla
 
 
 <br>
-<kbd><img src="./assets/i3.png"></kbd>
+![i3](https://user-images.githubusercontent.com/78134473/208165287-018984e1-31bd-4e61-910c-df34bf7038ea.png)
+
 <br>
 
 # Features Implemented
